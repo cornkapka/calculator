@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>财富计算器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+            </div>
+            <h1>产能财富计算器</h1>
+        </header>
+        
+        <div class="form-group">
+            <label for="level-select">选择圈层：</label>
+            <select id="level-select" class="form-control">
+                <option value="">请选择...</option>
+                <option value="layer-1">一圈层</option>
+                <option value="layer-2">二圈层</option>
+                <option value="layer-3">三圈层</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="employee-sequence">选择员工序列：</label>
+            <select id="employee-sequence" class="form-control" disabled>
+                <option value="">请先选择圈层</option>
+            </select>
+        </div>
+
+        
+        
+        <!-- 战客客户经理输入区域 -->
+        <div id="zhankejingli-inputs" class="employee-inputs hidden">
+            <div class="input-section">
+                <h3>木本业务</h3>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="zk-muben-zhuanxian">专线产能 (元)：</label>
+                        <input type="number" id="zk-muben-zhuanxian" min="0" value="0">
+                    </div>
+                    <div class="input-field">
+                        <label for="zk-muben-yunmas">云MAS产能 (元)：</label>
+                        <input type="number" id="zk-muben-yunmas" min="0" value="0">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="zk-muben-yunyewu">云业务产能 (元)：</label>
+                        <input type="number" id="zk-muben-yunyewu" min="0" value="0">
+                    </div>
+                    <div class="input-field">
+                        <label for="zk-muben-wulianwang">物联网产能 (元)：</label>
+                        <input type="number" id="zk-muben-wulianwang" min="0" value="0">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="zk-muben-5g">5G产能 (元)：</label>
+                        <input type="number" id="zk-muben-5g" min="0" value="0">
+                    </div>
+                    <div class="input-field">
+                        <label for="zk-muben-jiaoyu">和教育产能 (元)：</label>
+                        <input type="number" id="zk-muben-jiaoyu" min="0" value="0">
+                    </div>
+                </div>
+                <div class="total-row">
+                    <span>木本业务总产能：</span>
+                    <span id="zk-muben-total">0 元</span>
+                </div>
+            </div>
+            
+            <div class="input-section">
+                <h3>其他产能</h3>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="zk-zs-xiangmu">项目IT产能 (元)：</label>
+                        <input type="number" id="zk-zs-xiangmu" min="0" value="0">
+                    </div>
+                </div>
+                <!-- 用于脚本计算增收赛道：木本产能隐藏存储 -->
+                <input type="hidden" id="zk-zs-muben" value="0">
+                <div class="total-row">
+                    <span>增收赛道其他产能：</span>
+                    <span id="zk-zs-other-total">0 元</span>
+                </div>
+                <div class="total-row">
+                    <span>增收赛道总产能：</span>
+                    <span id="zk-zs-total">0 元</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 商客/网格客户经理输入区域 -->
+        <div id="wgsk-inputs" class="employee-inputs hidden">
+            <div class="input-section">
+                <h3>木本业务</h3>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="wgsk-gr-zhuanxian">专线产能 (元)：</label>
+                        <input type="number" id="wgsk-gr-zhuanxian" min="0" value="0">
+                    </div>
+                    <div class="input-field">
+                        <label for="wgsk-gr-yunmas">云MAS产能 (元)：</label>
+                        <input type="number" id="wgsk-gr-yunmas" min="0" value="0">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="wgsk-gr-yunyewu">云业务产能 (元)：</label>
+                        <input type="number" id="wgsk-gr-yunyewu" min="0" value="0">
+                    </div>
+                    <div class="input-field">
+                        <label for="wgsk-gr-wulianwang">物联网产能 (元)：</label>
+                        <input type="number" id="wgsk-gr-wulianwang" min="0" value="0">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="wgsk-gr-5g">5G产能 (元)：</label>
+                        <input type="number" id="wgsk-gr-5g" min="0" value="0">
+                    </div>
+                    <div class="input-field">
+                        <label for="wgsk-gr-jiaoyu">和教育产能 (元)：</label>
+                        <input type="number" id="wgsk-gr-jiaoyu" min="0" value="0">
+                    </div>
+                </div>
+                <div class="total-row">
+                    <span>木本业务总产能：</span>
+                    <span id="wgsk-gr-muben-total">0 元</span>
+                </div>
+            </div>
+            
+            <div class="input-section">
+                <h3>其他产能</h3>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="wgsk-gr-xiangmu">项目IT产能 (元)：</label>
+                        <input type="number" id="wgsk-gr-xiangmu" min="0" value="0">
+                    </div>
+                    <div class="input-field">
+                        <label for="wgsk-td-jiedui">直销队产能 (元)：</label>
+                        <input type="number" id="wgsk-td-jiedui" min="0" value="0">
+                    </div>
+                </div>
+                <div class="total-row">
+                    <span>增收赛道总产能：</span>
+                    <span id="wgsk-td-total">0 元</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 产能填写（通用：解方经理、商客主任、服务中心主任） -->
+        <div id="capacity-only-inputs" class="employee-inputs hidden">
+            <div class="input-section">
+                <h3>产能填写</h3>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="capacity-only-capacity">产能金额 (元)：</label>
+                        <input type="number" id="capacity-only-capacity" min="0" value="0">
+                    </div>
+                </div>
+                <div class="total-row">
+                    <span>总产能：</span>
+                    <span id="capacity-only-total">0 元</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 产能填写（独立：战客中心主任） -->
+        <div id="zhanke-director-inputs" class="employee-inputs hidden">
+            <div class="input-section">
+                <h3>产能填写</h3>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="zhanke-capacity">产能金额 (元)：</label>
+                        <input type="number" id="zhanke-capacity" min="0" value="0">
+                    </div>
+                </div>
+                <div id="jfzx-people-row" class="input-row">
+                    <div class="input-field">
+                        <label for="jfzx-people-count">战客客户经理人数：</label>
+                        <input type="number" id="jfzx-people-count" min="1" value="1">
+                    </div>
+                </div>
+                <div class="total-row">
+                    <span>总产能：</span>
+                    <span id="zhanke-capacity-total">0 元</span>
+                </div>
+            </div>
+        </div>
+        
+        <button id="calculate-btn">计算奖金</button>
+        
+        <div id="result" class="result hidden">
+            <h2>奖金计算结果</h2>
+            <div id="result-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

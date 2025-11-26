@@ -1,0 +1,64 @@
+{
+  "layers": {
+    "layer-1": {
+      "zhankejingli": {
+        "muben": { "target2": 3200, "rates": [ { "min": 1.2, "rate": 0.4 }, { "min": 1.0, "rate": 0.3 }, { "min": 0.8, "rate": 0.2 } ], "max": 3000 },
+        "zs":    { "target2": 7700, "rates": [ { "min": 1.2, "rate": 0.4 }, { "min": 1.0, "rate": 0.3 }, { "min": 0.8, "rate": 0.2 } ], "max": 5000 }
+      },
+      "shangkejingli": {
+        "gr": { "target2": 1500, "rates": [ { "min": 1.2, "rate": 0.4 }, { "min": 1.0, "rate": 0.3 }, { "min": 0.8, "rate": 0.2 } ], "max": 3000 },
+        "td": { "target2": 50000, "rates": [ { "min": 1.2, "rate": 0.05 }, { "min": 1.0, "rate": 0.04 }, { "min": 0.8, "rate": 0.03 } ], "max": 5000 }
+      },
+      "jiejuefangan": { "linear": { "target": 25000, "factor": 1250, "max": 5000 } },
+      "zhankejingli-zhuren": { "fixed": { "target2_per_person": 7700, "bonus": [ { "min": 1.2, "fixed": 5000 }, { "min": 1.0, "fixed": 3000 }, { "min": 0.8, "fixed": 2000 } ] } },
+      "shangkejingli-zhuren": { "fixed": { "target2": 210000, "bonus": [ { "min": 1.2, "fixed": 5000 }, { "min": 1.0, "fixed": 3000 }, { "min": 0.8, "fixed": 2000 } ] } }
+    },
+    "layer-2": {
+      "zhankejingli": {
+        "muben": { "target2": 2600, "rates": [ { "min": 1.2, "rate": 0.4 }, { "min": 1.0, "rate": 0.3 }, { "min": 0.8, "rate": 0.2 } ], "max": 3000 },
+        "zs":    { "target2": 6400, "rates": [ { "min": 1.2, "rate": 0.4 }, { "min": 1.0, "rate": 0.3 }, { "min": 0.8, "rate": 0.2 } ], "max": 5000 }
+      },
+      "shangkejingli": {
+        "gr": { "target2": 1200, "rates": [ { "min": 1.2, "rate": 0.4 }, { "min": 1.0, "rate": 0.3 }, { "min": 0.8, "rate": 0.2 } ], "max": 3000 },
+        "td": { "target2": 22000, "rates": [ { "min": 1.2, "rate": 0.05 }, { "min": 1.0, "rate": 0.04 }, { "min": 0.8, "rate": 0.03 } ], "max": 5000 }
+      },
+      "jiejuefangan": { "linear": { "target": 20000, "factor": 1000, "max": 5000 } },
+      "zhankejingli-zhuren": { "fixed": { "target2_per_person": 6400, "bonus": [ { "min": 1.2, "fixed": 5000 }, { "min": 1.0, "fixed": 3000 }, { "min": 0.8, "fixed": 2000 } ] } },
+      "shangkejingli-zhuren": { "fixed": { "target2": 65000, "bonus": [ { "min": 1.2, "fixed": 5000 }, { "min": 1.0, "fixed": 3000 }, { "min": 0.8, "fixed": 2000 } ] } }
+    },
+    "layer-3": {
+      "zhankejingli": {
+        "muben": { "target2": 2100, "rates": [ { "min": 1.2, "rate": 0.4 }, { "min": 1.0, "rate": 0.3 }, { "min": 0.8, "rate": 0.2 } ], "max": 3000 },
+        "zs":    { "target2": 5100, "rates": [ { "min": 1.2, "rate": 0.4 }, { "min": 1.0, "rate": 0.3 }, { "min": 0.8, "rate": 0.2 } ], "max": 5000 }
+      },
+      "shangkejingli": {
+        "gr": { "target2": 1000, "rates": [ { "min": 1.2, "rate": 0.4 }, { "min": 1.0, "rate": 0.3 }, { "min": 0.8, "rate": 0.2 } ], "max": 3000 },
+        "td": { "target2": 12000, "rates": [ { "min": 1.2, "rate": 0.05 }, { "min": 1.0, "rate": 0.04 }, { "min": 0.8, "rate": 0.03 } ], "max": 5000 }
+      },
+      "jiejuefangan": { "linear": { "target": 15000, "factor": 750, "max": 5000 } },
+      "zhankejingli-zhuren": { "fixed": { "target2_per_person": 5100, "bonus": [ { "min": 1.2, "fixed": 5000 }, { "min": 1.0, "fixed": 3000 }, { "min": 0.8, "fixed": 2000 } ] } },
+      "shangkejingli-zhuren": { "fixed": { "target2": 25000, "bonus": [ { "min": 1.2, "fixed": 5000 }, { "min": 1.0, "fixed": 3000 }, { "min": 0.8, "fixed": 2000 } ] } }
+    },
+    "attr-heavy": {
+      "wanggejingli": {
+        "gr": { "target2": 2700, "rates": [ { "min": 1.2, "rate": 0.2 }, { "min": 1.0, "rate": 0.1 }, { "min": 0.8, "rate": 0.05 } ], "max": 3000 },
+        "td": { "target2": 8200, "rates": [ { "min": 1.2, "rate": 0.2 }, { "min": 1.0, "rate": 0.1 }, { "min": 0.8, "rate": 0.05 } ], "max": 5000 }
+      },
+      "zonghe-zhong-zhong": { "fixed": { "target2": 25000, "bonus": [ { "min": 1.2, "fixed": 5000 }, { "min": 1.0, "fixed": 3000 }, { "min": 0.8, "fixed": 2000 } ] } }
+    },
+    "attr-medium": {
+      "wanggejingli-zhong": {
+        "gr": { "target2": 2200, "rates": [ { "min": 1.2, "rate": 0.2 }, { "min": 1.0, "rate": 0.1 }, { "min": 0.8, "rate": 0.05 } ], "max": 3000 },
+        "td": { "target2": 5700, "rates": [ { "min": 1.2, "rate": 0.2 }, { "min": 1.0, "rate": 0.1 }, { "min": 0.8, "rate": 0.05 } ], "max": 5000 }
+      },
+      "zonghe-zhong": { "fixed": { "target2": 12000, "bonus": [ { "min": 1.2, "fixed": 3000 }, { "min": 1.0, "fixed": 1800 }, { "min": 0.8, "fixed": 1200 } ] } }
+    },
+    "attr-weak": {
+      "wanggejingli-ruo": {
+        "gr": { "target2": 1700, "rates": [ { "min": 1.2, "rate": 0.2 }, { "min": 1.0, "rate": 0.1 }, { "min": 0.8, "rate": 0.05 } ], "max": 3000 },
+        "td": { "target2": 3600, "rates": [ { "min": 1.2, "rate": 0.2 }, { "min": 1.0, "rate": 0.1 }, { "min": 0.8, "rate": 0.05 } ], "max": 5000 }
+      },
+      "zonghe-zhong-ruo": { "fixed": { "target2": 3600, "bonus": [ { "min": 1.2, "fixed": 2000 }, { "min": 1.0, "fixed": 1200 }, { "min": 0.8, "fixed": 800 } ] } }
+    }
+  }
+}
